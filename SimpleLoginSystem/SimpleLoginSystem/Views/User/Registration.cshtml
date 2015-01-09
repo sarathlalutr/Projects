@@ -1,0 +1,25 @@
+﻿@model SimpleLoginSystem.Models.UserModel
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true,"Create user failed. Check the details entered");
+    <div>
+        
+        <fieldset>
+            <legend>Registration Form</legend>
+            <div>@Html.LabelFor(u=>u.Email)</div>
+            <div>@Html.TextBoxFor(u=>u.Email)
+                @Html.ValidationMessageFor(u=>u.Email)
+            </div>
+            <div>@Html.LabelFor(u=>u.Password)</div>
+            <div>@Html.PasswordFor(u=>u.Password )
+                @Html.ValidationMessageFor(u=>u.Password)
+            </div>
+            
+            <input type="submit" value="Login"/>
+        </fieldset>
+    </div>
+}
