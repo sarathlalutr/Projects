@@ -1,0 +1,5 @@
+E:\MyProjects\NBAD\NBAD\UserDetails\bin\Debug\UserDetails.dll
+E:\MyProjects\NBAD\NBAD\UserDetails\bin\Debug\UserDetails.pdb
+E:\MyProjects\NBAD\NBAD\UserDetails\obj\Debug\UserDetails.csprojResolveAssemblyReference.cache
+E:\MyProjects\NBAD\NBAD\UserDetails\obj\Debug\UserDetails.dll
+E:\MyProjects\NBAD\NBAD\UserDetails\obj\Debug\UserDetails.pdb

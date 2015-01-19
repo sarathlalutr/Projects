@@ -1,0 +1,4 @@
+E:\MyProjects\NBAD\NBAD\Entities\bin\Entities.dll
+E:\MyProjects\NBAD\NBAD\Entities\bin\Entities.pdb
+E:\MyProjects\NBAD\NBAD\Entities\obj\Debug\Entities.dll
+E:\MyProjects\NBAD\NBAD\Entities\obj\Debug\Entities.pdb
