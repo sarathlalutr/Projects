@@ -1,4 +1,3 @@
-E:\MyProjects\NBAD\NBAD\NBAD\obj\Debug\NBAD.csprojResolveAssemblyReference.cache
 E:\MyProjects\NBAD\NBAD\NBAD\bin\NBAD.dll
 E:\MyProjects\NBAD\NBAD\NBAD\bin\NBAD.pdb
 E:\MyProjects\NBAD\NBAD\NBAD\bin\AspNet.ScriptManager.jQuery.dll
@@ -16,6 +15,7 @@ E:\MyProjects\NBAD\NBAD\NBAD\bin\Microsoft.AspNet.Membership.OpenAuth.dll
 E:\MyProjects\NBAD\NBAD\NBAD\bin\Microsoft.Web.Infrastructure.dll
 E:\MyProjects\NBAD\NBAD\NBAD\bin\System.Web.Providers.dll
 E:\MyProjects\NBAD\NBAD\NBAD\bin\UserDetails.dll
+E:\MyProjects\NBAD\NBAD\NBAD\bin\EPPlus.dll
 E:\MyProjects\NBAD\NBAD\NBAD\bin\Encryption.pdb
 E:\MyProjects\NBAD\NBAD\NBAD\bin\Libraries.pdb
 E:\MyProjects\NBAD\NBAD\NBAD\bin\UserDetails.pdb
@@ -26,5 +26,7 @@ E:\MyProjects\NBAD\NBAD\NBAD\bin\DotNetOpenAuth.OAuth.Consumer.xml
 E:\MyProjects\NBAD\NBAD\NBAD\bin\DotNetOpenAuth.OpenId.xml
 E:\MyProjects\NBAD\NBAD\NBAD\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
 E:\MyProjects\NBAD\NBAD\NBAD\bin\DotNetOpenAuth.AspNet.xml
+E:\MyProjects\NBAD\NBAD\NBAD\bin\EPPlus.xml
+E:\MyProjects\NBAD\NBAD\NBAD\obj\Debug\NBAD.csprojResolveAssemblyReference.cache
 E:\MyProjects\NBAD\NBAD\NBAD\obj\Debug\NBAD.dll
 E:\MyProjects\NBAD\NBAD\NBAD\obj\Debug\NBAD.pdb

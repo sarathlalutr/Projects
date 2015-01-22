@@ -5,24 +5,67 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-     <link href="css/StyleSheet.css" rel="stylesheet" />
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <link href="css/colorbox.css" rel="stylesheet" />
     <script src="Scripts/jquery-1.7.1.min.js"></script>
+    <script src="Scripts/NBAD/zebra_dialog.js"></script>
+    <link href="css/zebra_dialog/flat/zebra_dialog.css" rel="stylesheet" />
+    <script src="Scripts/NBAD/BaseJs.js"></script>
     <script src="Scripts/NBAD/jquery.dataTables.min.js"></script>
+    <script src="Scripts/NBAD/jquery.colorbox-min.js"></script>
+    <script src="Scripts/NBAD/noty/packaged/jquery.noty.packaged.min.js"></script>
+    <script>
+        function showDashPop() {
+            $("#divDashPop").fadeIn();
+            return false;
+        }
+
+        function hideDashPop() {
+            $("#divDashPop").fadeOut();
+            return false;
+        }
+    </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="cb">
-            <asp:Button ID="btnLogout" class="logout_btn" Visible="True" runat="server" Text="Logout" OnClick="btnLogout_Click" />
-        
-        <ul class="ul-login-details1">
-         <li class="logged-user">Logged in as <span><%= Session["username"].ToString() %></span></li>
+        <div class="cb" style="width: 960px; margin: auto; padding-top: 30px;">
+             <%--<img src="Images/NBADLogo.png" alt="Logo">--%>
+            <%--http://www.cssportal.com/css3-menu-generator/--%>
+            <ul id="menu-bar">
+                <li class=""><a href="UploadData.aspx">Upload File</a></li>
+                <li class=""><a href="detailsEntry.aspx">Details Entry</a></li>
+                <li class=""><a href="#">Master Details</a>
+                 <ul>
+                        <li><a href="branchEntry.aspx">Branch Entry</a></li>
+                        <li><a href="departmentEntry.aspx">Department Entry</a></li>
+                        <li><a href="designationEntry.aspx">Designation Entry</a></li>
+                        <li><a href="locationEntry.aspx">Location Entry</a></li>
+                    </ul>
+                    </li>
+                <li><a href="#">Reports</a>
+                    <ul>
+                        <li><a href="BranchReport.aspx">Branch-wise Report</a></li>
+                        <li><a href="DepartmentReport.aspx">Department-wise Report</a></li>
+                        <li><a href="DesignationReport.aspx">Designation-wise Report</a></li>
+                        <li><a href="LocationReport.aspx">Location-wise Report</a></li>
+                    </ul>
+                </li>
+                
+                <li style="float:right"><a href="#" onserverclick="btnLogout_Click" runat="server">Logout</a></li>
+
             </ul>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-       
-        </asp:ContentPlaceHolder>
-    </div>
+            
+
+
+
+            <div onmouseover=" javascript:$('#divUserDetails').slideUp();" id="bDiv">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
     </form>
 </body>
 </html>

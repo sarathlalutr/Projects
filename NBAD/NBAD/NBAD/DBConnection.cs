@@ -84,5 +84,236 @@ namespace NBAD
 
             return table;
         }
+
+        internal DataTable getDesignationAll()
+        {
+            var allData = new DataTable();
+            try
+            {
+                var cmd = new SqlCommand("usp_DesignationSelectAll", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                if (con.State.Equals(ConnectionState.Closed))
+                {
+                    con.Open();
+                }
+                var adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(allData);
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+            }
+            return allData;
+        }
+
+        internal DataTable getBranchAll()
+        {
+            var allData = new DataTable();
+            try
+            {
+                var cmd = new SqlCommand("usp_BranchSelectAll", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                if (con.State.Equals(ConnectionState.Closed))
+                {
+                    con.Open();
+                }
+                var adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(allData);
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+            }
+            return allData;
+        }
+
+        internal DataTable getDepartmentAll()
+        {
+            var allData = new DataTable();
+            try
+            {
+                var cmd = new SqlCommand("usp_DepartmentSelectAll", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                if (con.State.Equals(ConnectionState.Closed))
+                {
+                    con.Open();
+                }
+                var adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(allData);
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+            }
+            return allData;
+        }
+
+        internal DataTable getLocationAll()
+        {
+            var allData = new DataTable();
+            try
+            {
+                var cmd = new SqlCommand("usp_LocationSelectAll", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                if (con.State.Equals(ConnectionState.Closed))
+                {
+                    con.Open();
+                }
+                var adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(allData);
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+            }
+            return allData;
+        }
+
+        internal int InsertBranch(string branchId, string branchName)
+        {
+            if (con.State.Equals(ConnectionState.Closed))
+            {
+                con.Open();
+            }
+            var cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "usp_tblBranchInsert";
+            cmd.Parameters.Add("@BranchID", branchId);
+            cmd.Parameters.Add("@BranchName", branchName);
+            cmd.Connection = con;
+            int rs = cmd.ExecuteNonQuery();
+
+            con.Close();
+            return rs;
+        }
+
+        internal DataTable GetAllDetails(string procedureName)
+        {
+            var allData = new DataTable();
+            //SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
+
+            try
+            {
+                var cmd = new SqlCommand(procedureName, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                if (con.State.Equals(ConnectionState.Closed))
+                {
+                    con.Open();
+                }
+                var adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(allData);
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+            }
+            return allData;
+        }
+
+        internal DataTable GetDetailsWithId(string id,string procedureName,string parameter)
+        {
+            var allData = new DataTable();
+            SqlParameter param;
+            //SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
+
+            try
+            {
+                if (con.State.Equals(ConnectionState.Closed))
+                {
+                    con.Open();
+                }
+                var cmd = new SqlCommand(procedureName, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                param = new SqlParameter(parameter, id);
+                param.Direction = ParameterDirection.Input;
+                param.DbType = DbType.String;
+
+                cmd.Parameters.Add(param);
+                var adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(allData);
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+            }
+            return allData;
+        }
+
+        internal void updateBranch(string branchId, string branchName, string branchEntryId)
+        {
+            string status = "";
+            if (con.State.Equals(ConnectionState.Closed))
+            {
+                con.Open();
+            }
+            var cmd = new SqlCommand("usp_tblBranchUpdate", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@BranchEntryId", SqlDbType.Int).Value = branchEntryId;
+            cmd.Parameters.Add("@BranchID", branchId);
+            cmd.Parameters.Add("@BranchName", branchName);
+         
+            //con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        internal string deletewithId(string BranchEntryId,string procedureName,string parameter)
+        {
+            string res = "";
+            try
+            {
+                if (con.State.Equals(ConnectionState.Closed))
+                {
+                    con.Open();
+                }
+                var cmd = new SqlCommand(procedureName, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(parameter, SqlDbType.Int).Value = BranchEntryId;
+                res = "" + cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (SqlException ex)
+            {
+                con.Close();
+                res = ex.Number.ToString();
+            }
+            return res;
+        }
+
+        internal object GetSearchDetails(string procedureName, string parameter, string searchString)
+        {
+            var allData = new DataTable();
+            SqlParameter param;
+            //SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
+
+            try
+            {
+                if (con.State.Equals(ConnectionState.Closed))
+                {
+                    con.Open();
+                }
+                var cmd = new SqlCommand(procedureName, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                param = new SqlParameter(parameter, searchString);
+                param.Direction = ParameterDirection.Input;
+                param.DbType = DbType.String;
+
+                cmd.Parameters.Add(param);
+                var adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(allData);
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+            }
+            return allData;
+        }
     }
 }

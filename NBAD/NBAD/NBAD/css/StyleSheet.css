@@ -86,7 +86,7 @@ ul.ul-login-details1 {
 }
 
     .table-grid th {
-        background: #1a93c6;
+        background: #138e4b;
         /*background: url(../images/bg_gridHead.png) repeat-x left bottom; #1a93c6*/
         color: #ffffff;
         height: 20px;
@@ -152,7 +152,7 @@ ul.ul-login-details1 {
     .mGrid th {
         padding: 7px 4px;
         color: #fff;
-        background: #D0A234;
+        background: #138e4b;
         border-right: solid 1px #ededed;
         text-align: left;
     }
@@ -463,11 +463,12 @@ ul.ul-login-details1 {
 
 fieldset {
     font-family: Etihad_Altis_Book;
-    border: 2px solid #1a93c6;
+    border: 2px solid #138e4b;
     background: #FFF;
     border-radius: 5px;
     padding: 15px;
     font-size: 15px;
+    width: 926px;
 }
 
     fieldset legend {
@@ -553,4 +554,547 @@ fieldset {
 
 .cb {
     clear: both;
+    padding-top: 85px;
+}
+
+
+/*Sarat*/
+ input[type="text"],input[type="textbox"], input[type="password"] {
+     background: none repeat scroll 0 0 #161616;
+     border: 1px solid #4D0A36;
+     color: #FFFFFF;
+     height: 19px;
+     padding-top: 3px;
+     width: 225px;
+ }
+
+ .w340{
+    width:340px;
+}
+.ma{
+    margin:auto;
+}
+.fl{
+    float:left;
+}
+
+.mtb10{
+    margin:10px 0px;
+}
+.mt20{
+       margin-top:20px;
+}
+.mt5{
+       margin-top:5px;
+}
+.admin_login_form{
+    margin-top:160px;
+    text-align: center
+}
+.admin-login-form-image_welcome{
+    margin:20px 0px;
+}
+
+input[type="textbox"],input[type="text"],input[type="password"]{
+    background:#F6F6F6;
+    border:2px solid #C6C6C6;
+    height:41px;
+    color:#FFF;
+    width:336px;
+    padding-top:3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color:#CCCCCC;
+    text-align: center;
+    font-weight: bold;
+}
+
+.submit {
+    background: url("../Images/login-copy_11-15.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 41px;
+    margin-right: 6px;
+    width: 340px;
+    border:none;
+    font-size: 19px;
+    color:#FFFFFF;
+    
+}
+.submit:hover {
+    background-position:0px -41px;
+}
+.mandatory {
+    position:absolute;right:-10px;top: 16px;
+}
+.pr {
+    position: relative;
+}
+
+/*From CP Added by sharon- For Master*/
+
+
+ul.ul-login-details1 {
+    float: right;
+    font-family: 'Etihad_Altis_Book';
+    margin: 0px;
+    padding: 0px;
+}
+
+    ul.ul-login-details1 li {
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        background: #41284f;
+        border-radius: 2px;
+        display: inline-block;
+        float: left;
+        margin: 12px 5px 5px 5px;
+    }
+
+        ul.ul-login-details1 li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+            ul.ul-login-details1 li a.aLock {
+                background: url(../images/inner_page/sprite.png) no-repeat 2px -150px;
+                color: #b195c2;
+                cursor: pointer;
+                display: inline-block;
+                height: 27px;
+                margin: 5px 0px 0px 5px;
+                padding: 5px 5px 0px 24px;
+            }
+
+                ul.ul-login-details1 li a.aLock:hover {
+                    background: url(../images/inner_page/sprite.png) no-repeat 2px -110px;
+                    color: #ffffff;
+                }
+
+        ul.ul-login-details1 li span {
+            color: #FFF;
+        }
+
+        ul.ul-login-details1 li.logged-user {
+            /*background: url(../images/inner_page/sprite.png) no-repeat 7px 11px #41284f;*/
+            background-color: #29000C;
+            color: #D0A234;
+            cursor: default;
+            padding: 0px 10px 10px 30px;
+        }
+
+        ul.ul-login-details1 li.logoff {
+            background: url(../images/inner_page/sprite.png) no-repeat 7px -17px #41284f;
+            display: inline-block;
+            padding: 10px 10px 10px 30px;
+        }
+
+            ul.ul-login-details1 li.logoff:hover {
+                background: url(../images/inner_page/sprite.png) no-repeat 7px -45px #41284f;
+            }
+
+
+.dv_userdetails {
+    -moz-border-radius: 5px;
+    -moz-border-radius-topright: 0;
+    -webkit-border-radius: 5px;
+    -webkit-border-top-right-radius: 0;
+    background: #29000C;
+    border-radius: 5px;
+    border-top: none;
+    border-top-right-radius: 0;
+    display: none;
+    font-family: 'Etihad_Altis_Book';
+    padding: 0px;
+    padding: 5px 10px;
+    position: absolute;
+    right: -4px;
+    top: 32px;
+    z-index: 99999;
+}
+
+ul.userdetails {
+    font-family: 'Etihad_Altis_Book';
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+    ul.userdetails li {
+        border: none;
+        border-bottom: solid 1px #29000C;
+        display: block;
+        float: none;
+        margin: 5px;
+        padding: 2px;
+    }
+
+        ul.userdetails li span.s-user-role {
+            background: url(../images/inner_page/icons-userdetails.png) no-repeat 0px 4px;
+            color: #29000C;
+            /*font: normal 13px Etihad_Altis_Book;*/
+            font: normal 13px;
+            padding: 2px 0px 2px 25px;
+        }
+
+            ul.userdetails li span.s-user-role:hover {
+                background: url(../images/inner_page/icons-userdetails.png) no-repeat 0px -155px;
+            }
+
+        ul.userdetails li span.s-email {
+            background: url(../images/inner_page/icons-userdetails.png) no-repeat 0px -25px;
+            color: #D0A234;
+            /*font: normal 13px Etihad_Altis_Book;*/
+            font: normal 13px;
+            padding: 2px 5px 2px 25px;
+        }
+
+        ul.userdetails li span.s-phone {
+            background: url(../images/inner_page/sprite.png) no-repeat 0px -180px;
+            color: #ffffff;
+            /*font: normal 13px Etihad_Altis_Book;*/
+            font: normal 13px;
+            padding: 10px 5px 2px 25px;
+        }
+
+        ul.userdetails li a {
+            color: #ffffff;
+            /*font: normal 13px Etihad_Altis_Book;*/
+            font: normal 13px;
+            text-decoration: none;
+        }
+
+            ul.userdetails li a:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+
+        ul.userdetails li span.aUser-role {
+            background: url(../images/inner_page/icons-userdetails.png) no-repeat 0px 2px;
+            color: #D0A234;
+            display: inline-block;
+            /*font: normal 13px Etihad_Altis_Book;*/
+            font: normal 13px;
+            padding: 0px 0px 0px 25px;
+            text-decoration: none;
+        }
+
+        /*ul.userdetails li span.aUser-role:hover {
+                color: #beaacb;
+                background: url(../images/inner_page/icons-userdetails.png) no-repeat 0px -157px;
+            }*/
+
+        ul.userdetails li a.change-pwd {
+            background: url(../images/inner_page/icons-userdetails.png) no-repeat 0px -88px;
+            color: #D0A234;
+            display: inline-block;
+            /*font: normal 13px Etihad_Altis_Book;*/
+            font: normal 13px;
+            padding: 0px 0px 0px 25px;
+            text-decoration: none;
+        }
+
+            ul.userdetails li a.change-pwd:hover {
+                background: url(../images/inner_page/icons-userdetails.png) no-repeat -1px -247px;
+                color: #FFF;
+            }
+
+        ul.userdetails li a.logout {
+            background: url(../images/inner_page/sprite.png) no-repeat -1px -26px #29000C;
+            color: #D0A234;
+            display: inline-block;
+            /*font: normal 13px Etihad_Altis_Book;*/
+            font: normal 13px;
+            padding: 0px 0px 5px 25px;
+            text-decoration: none;
+        }
+
+            ul.userdetails li a.logout:hover {
+                background: url(../images/inner_page/sprite.png) no-repeat -1px -54px #29000C;
+                color: #FFF;
+            }
+
+/*From CP Added by sharon- For Master*/
+
+
+
+#menu-bar {
+  /*width: 95%;*/
+  margin: 0px 0px 0px 0px;
+  padding: 6px 6px 4px 6px;
+  height: 40px;
+  line-height: 100%;
+  border-radius: 6px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  box-shadow: 2px 2px 3px #666666;
+  -webkit-box-shadow: 2px 2px 3px #666666;
+  -moz-box-shadow: 2px 2px 3px #666666;
+  background: #8B8B8B;
+  background: linear-gradient(top,  #A9A9A9, #138e4b);
+  background: -ms-linear-gradient(top,  #A9A9A9,  #138e4b);
+  background: -webkit-gradient(linear, left top, left bottom, from(#A9A9A9), to(#138e4b));
+  background: -moz-linear-gradient(top,  #A9A9A9,  #138e4b);
+  border: solid 1px #6D6D6D;
+  position:relative;
+  z-index:999;
+}
+#menu-bar li {
+  margin: 0px 0px 6px 0px;
+  padding: 0px 6px 0px 6px;
+  float: left;
+  position: relative;
+  list-style: none;
+}
+#menu-bar a {
+  font-weight: bold;
+  font-family: arial;
+  font-style: normal;
+  font-size: 12px;
+  color: #E7E5E5;
+  text-decoration: none;
+  display: block;
+  padding: 6px 20px 6px 20px;
+  margin: 0;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  text-shadow: 2px 2px 3px #000000;
+}
+#menu-bar li ul li a {
+  margin: 0;
+}
+#menu-bar .active a, #menu-bar li:hover > a {
+  background: #0399D4;
+  background: linear-gradient(top,  #EBEBEB,  #A1A1A1);
+  background: -ms-linear-gradient(top,  #EBEBEB,  #A1A1A1);
+  background: -webkit-gradient(linear, left top, left bottom, from(#EBEBEB), to(#A1A1A1));
+  background: -moz-linear-gradient(top,  #EBEBEB,  #A1A1A1);
+  color: #444444;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  text-shadow: 2px 2px 3px #FFFFFF;
+}
+#menu-bar ul li:hover a, #menu-bar li:hover li a {
+  background: none;
+  border: none;
+  color: #666;
+  -box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+#menu-bar ul a:hover {
+  background: #0399D4 !important;
+  background: linear-gradient(top,  #04ACEC,  #0186BA) !important;
+  background: -ms-linear-gradient(top,  #04ACEC,  #0186BA) !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#04ACEC), to(#0186BA)) !important;
+  background: -moz-linear-gradient(top,  #04ACEC,  #0186BA) !important;
+  color: #FFFFFF !important;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  text-shadow: 2px 2px 3px #FFFFFF;
+}
+#menu-bar li:hover > ul {
+  display: block;
+}
+#menu-bar ul {
+  background: #DDDDDD;
+  background: linear-gradient(top,  #FFFFFF,  #CFCFCF);
+  background: -ms-linear-gradient(top,  #FFFFFF,  #CFCFCF);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#CFCFCF));
+  background: -moz-linear-gradient(top,  #FFFFFF,  #CFCFCF);
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 185px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  border: solid 1px #B4B4B4;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 3px #222222;
+  -moz-box-shadow: 2px 2px 3px #222222;
+  box-shadow: 2px 2px 3px #222222;
+}
+#menu-bar ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+#menu-bar ul a {
+  padding:10px 0px 10px 15px;
+  color:#424242 !important;
+  font-size:12px;
+  font-style:normal;
+  font-family:arial;
+  font-weight: normal;
+  text-shadow: 2px 2px 3px #FFFFFF;
+}
+#menu-bar ul li:first-child > a {
+  border-top-left-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-right-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+}
+#menu-bar ul li:last-child > a {
+  border-bottom-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+}
+#menu-bar:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#menu-bar {
+  display: inline-block;
+}
+  html[xmlns] #menu-bar {
+  display: block;
+}
+* html #menu-bar {
+  height: 1%;
+}
+
+/*Added by sharon for Search>>*/
+
+.dv_fl_right {
+    float: right;
+}
+
+.aSearch {
+    width: 32px;
+    height: 32px;
+    background: url(../images/search.png) center center #138e4b;
+    display: block;
+    float: right;
+    margin: 0px -3px 0px 2px;
+    text-indent: -9999px;
+}
+
+.dv_search {
+    float: right;
+    display: block;
+    background-color: #f6f6f6;
+    padding: 5px 10px;
+    border: solid 1px #afafaf;
+    margin: 0px 2px 0px 0px;
+    color: #aa1a64;
+}
+
+ul.ul_searchform {
+    list-style: none;
+    margin: 0;
+    padding: 0; /*padding-top:10px;*/
+    margin-top: 2px;
+}
+
+    ul.ul_searchform li {
+        margin: 0;
+        padding: 5px;
+        border: none;
+        display: inline-block;
+        float: left;
+        font-size: 14px;
+        color: #000000;
+        font-weight: normal;
+        text-decoration: none;
+        text-align: left;
+    }
+
+        ul.ul_searchform li span {
+            font-size: 14px;
+            color: #494747;
+            font-weight: normal;
+            text-decoration: none;
+            text-align: left;
+            display: inline-block;
+            margin: 4px 10px 0px 8px;
+            float: left;
+        }
+
+
+.pageheader {
+    height: 32px;
+    display: block;
+    background: url(../images/bg_footer.png) repeat-x 0px 25px;
+    font-weight: bold;
+    padding: 0px 5px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #000000;
+}
+
+    .pageheader span {
+        height: 34px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: left;
+        display: inline-block;
+        padding: 5px;
+        margin-left: 5px;
+        color: #0f1011;
+    }
+
+.demo_container, .demo_container1 {
+    position: relative;
+    display: block;
+    /*border: solid 1px #1a93c6;*/
+    margin: 10px 2px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #fff;
+}
+
+/*Added by sharon for Search>>*/
+
+.clear { clear: both; }
+
+.addkey_btn_search {
+    background: #138e4b;
+    /*background: -moz-linear-gradient(center top, #CCA55A 0%, #AF8D4D 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    
+    font-size: 15px;
+    padding: 3px 15px;
+    height: 29px;
+}
+a.aEdit {
+    width: 20px;
+    height: 20px;
+    background: url(../images/sprite_icons.png) 0px -71px;
+    display: block;
+    float: right;
+    margin: 0px 2px;
+    text-indent: -9999px;
+}
+a.aDelete {
+    width: 24px;
+    height: 24px;
+    background: url(../images/sprite_icons.png) 0px -114px;
+    display: block;
+    float: right;
+    margin: 0px 2px;
+    text-indent: -9999px;
+    font-size: 14px;
 }

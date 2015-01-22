@@ -1,0 +1,4 @@
+E:\MyProjects\NBAD\NBAD\Encryption\bin\Release\Encryption.dll
+E:\MyProjects\NBAD\NBAD\Encryption\bin\Release\Encryption.pdb
+E:\MyProjects\NBAD\NBAD\Encryption\obj\Release\Encryption.dll
+E:\MyProjects\NBAD\NBAD\Encryption\obj\Release\Encryption.pdb

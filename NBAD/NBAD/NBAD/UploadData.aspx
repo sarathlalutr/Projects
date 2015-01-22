@@ -25,6 +25,12 @@
 
 
    
+    <style type="text/css">
+        .addkey_btn {}
+    </style>
+
+
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="cb">
@@ -44,7 +50,7 @@
                         </div>
                     </fieldset>
         <fieldset>
-                        <legend>Upload Excel</legend>
+                        <legend>Upload CSV</legend>
 
 
                         <%--<div>Please Select Excel File: 
@@ -58,7 +64,7 @@
                             Please Select CSV File: 
                             
                                <asp:FileUpload ID="fileuploadExcel" runat="server" />
-                            <asp:Button ID="btnUpload" runat="server" Text="Upload" OnClick="btnUpload_Click" OnClientClick="showDivPageLoading();" CssClass="addkey_btn" />
+                            <asp:Button ID="btnUpload" runat="server" Text="Upload" OnClick="btnUpload_Click" OnClientClick="showDivPageLoading();" CssClass="addkey_btn" Height="25px" />
 
                         </div>
                     </fieldset>

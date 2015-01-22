@@ -1,0 +1,15 @@
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\Libraries.dll
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\Libraries.pdb
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\EPPlus.dll
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\System.Net.Http.dll
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\System.Web.Http.dll
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\UserDetails.dll
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\System.Net.Http.Formatting.dll
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\UserDetails.pdb
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\EPPlus.xml
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\System.Net.Http.xml
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\System.Web.Http.xml
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\System.Net.Http.Formatting.xml
+E:\MyProjects\NBAD\NBAD\Libraries\obj\Release\Libraries.csprojResolveAssemblyReference.cache
+E:\MyProjects\NBAD\NBAD\Libraries\obj\Release\Libraries.dll
+E:\MyProjects\NBAD\NBAD\Libraries\obj\Release\Libraries.pdb

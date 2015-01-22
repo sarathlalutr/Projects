@@ -163,10 +163,49 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\colorbox.css" />
     <Content Include="css\StyleSheet.css" />
+    <Content Include="css\zebra_dialog\default\confirmation.png" />
+    <Content Include="css\zebra_dialog\default\error.png" />
+    <Content Include="css\zebra_dialog\default\information.png" />
+    <Content Include="css\zebra_dialog\default\preloader.gif" />
+    <Content Include="css\zebra_dialog\default\question.png" />
+    <Content Include="css\zebra_dialog\default\warning.png" />
+    <Content Include="css\zebra_dialog\default\zebra_dialog.css" />
+    <Content Include="css\zebra_dialog\flat\confirmation.png" />
+    <Content Include="css\zebra_dialog\flat\error.png" />
+    <Content Include="css\zebra_dialog\flat\icons.txt" />
+    <Content Include="css\zebra_dialog\flat\information.png" />
+    <Content Include="css\zebra_dialog\flat\question.png" />
+    <Content Include="css\zebra_dialog\flat\warning.png" />
+    <Content Include="css\zebra_dialog\flat\zebra_dialog.css" />
+    <Content Include="EditBranch.aspx" />
     <Content Include="Images\accent.png" />
+    <Content Include="Images\border.png" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\controls.png" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\images\search.png" />
+    <Content Include="Images\images\sprite_icons.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\loading_background.png" />
+    <Content Include="Images\login-copy_01.png" />
+    <Content Include="Images\login-copy_02.png" />
+    <Content Include="Images\login-copy_03.png" />
+    <Content Include="Images\login-copy_04.png" />
+    <Content Include="Images\login-copy_05.png" />
+    <Content Include="Images\login-copy_06.png" />
+    <Content Include="Images\login-copy_07.png" />
+    <Content Include="Images\login-copy_08.png" />
+    <Content Include="Images\login-copy_09.png" />
+    <Content Include="Images\login-copy_10.png" />
+    <Content Include="Images\login-copy_11-15.png" />
+    <Content Include="Images\login-copy_11.png" />
+    <Content Include="Images\login-copy_12.png" />
+    <Content Include="Images\login-copy_13.png" />
+    <Content Include="Images\login-copy_15.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\NBADLogo.png" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
     <Content Include="Images\orderedList2.png" />
@@ -177,10 +216,46 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\overlay.png" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\spacer.gif" />
+    <Content Include="Images\sprite_icons.png" />
     <Content Include="Logon.aspx" />
     <Content Include="packages.config" />
     <Content Include="NBADMasterPage.Master" />
+    <Content Include="Scripts\NBAD\BaseJs.js" />
+    <Content Include="Scripts\NBAD\jquery.colorbox-min.js" />
+    <Content Include="Scripts\NBAD\noty\jquery.noty.js" />
+    <Content Include="Scripts\NBAD\noty\layouts\bottom.js" />
+    <Content Include="Scripts\NBAD\noty\layouts\bottomCenter.js" />
+    <Content Include="Scripts\NBAD\noty\layouts\bottomLeft.js" />
+    <Content Include="Scripts\NBAD\noty\layouts\bottomRight.js" />
+    <Content Include="Scripts\NBAD\noty\layouts\center.js" />
+    <Content Include="Scripts\NBAD\noty\layouts\centerLeft.js" />
+    <Content Include="Scripts\NBAD\noty\layouts\centerRight.js" />
+    <Content Include="Scripts\NBAD\noty\layouts\inline.js" />
+    <Content Include="Scripts\NBAD\noty\layouts\top.js" />
+    <Content Include="Scripts\NBAD\noty\layouts\topCenter.js" />
+    <Content Include="Scripts\NBAD\noty\layouts\topLeft.js" />
+    <Content Include="Scripts\NBAD\noty\layouts\topRight.js" />
+    <Content Include="Scripts\NBAD\noty\packaged\jquery.noty.packaged.js" />
+    <Content Include="Scripts\NBAD\noty\packaged\jquery.noty.packaged.min.js" />
+    <Content Include="Scripts\NBAD\noty\promise.js" />
+    <Content Include="Scripts\NBAD\noty\themes\default.js" />
+    <Content Include="Scripts\NBAD\Validations\BranchEntry.js" />
+    <Content Include="Scripts\NBAD\Validations\EditBranchEntry.js" />
+    <Content Include="Scripts\NBAD\zebra_dialog.js" />
     <Content Include="UploadData.aspx" />
+    <Content Include="DesignationReport.aspx" />
+    <Content Include="BranchReport.aspx" />
+    <Content Include="DepartmentReport.aspx" />
+    <Content Include="LocationReport.aspx" />
+    <Content Include="detailsEntry.aspx" />
+    <Content Include="branchEntry.aspx" />
+    <Content Include="departmentEntry.aspx" />
+    <Content Include="designationEntry.aspx" />
+    <Content Include="locationEntry.aspx" />
+    <None Include="Properties\PublishProfiles\NBAD.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -254,6 +329,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditBranch.aspx.cs">
+      <DependentUpon>EditBranch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditBranch.aspx.designer.cs">
+      <DependentUpon>EditBranch.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -292,6 +374,69 @@
     </Compile>
     <Compile Include="UploadData.aspx.designer.cs">
       <DependentUpon>UploadData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesignationReport.aspx.cs">
+      <DependentUpon>DesignationReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesignationReport.aspx.designer.cs">
+      <DependentUpon>DesignationReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BranchReport.aspx.cs">
+      <DependentUpon>BranchReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BranchReport.aspx.designer.cs">
+      <DependentUpon>BranchReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentReport.aspx.cs">
+      <DependentUpon>DepartmentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepartmentReport.aspx.designer.cs">
+      <DependentUpon>DepartmentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LocationReport.aspx.cs">
+      <DependentUpon>LocationReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocationReport.aspx.designer.cs">
+      <DependentUpon>LocationReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detailsEntry.aspx.cs">
+      <DependentUpon>detailsEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detailsEntry.aspx.designer.cs">
+      <DependentUpon>detailsEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="branchEntry.aspx.cs">
+      <DependentUpon>branchEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="branchEntry.aspx.designer.cs">
+      <DependentUpon>branchEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="departmentEntry.aspx.cs">
+      <DependentUpon>departmentEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="departmentEntry.aspx.designer.cs">
+      <DependentUpon>departmentEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="designationEntry.aspx.cs">
+      <DependentUpon>designationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="designationEntry.aspx.designer.cs">
+      <DependentUpon>designationEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="locationEntry.aspx.cs">
+      <DependentUpon>locationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="locationEntry.aspx.designer.cs">
+      <DependentUpon>locationEntry.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
