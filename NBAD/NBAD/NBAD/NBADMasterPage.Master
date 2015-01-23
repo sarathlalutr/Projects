@@ -42,6 +42,7 @@
                         <li><a href="departmentEntry.aspx">Department Entry</a></li>
                         <li><a href="designationEntry.aspx">Designation Entry</a></li>
                         <li><a href="locationEntry.aspx">Location Entry</a></li>
+                     <li><a href="descriptionEntry.aspx">Description Entry</a></li>
                     </ul>
                     </li>
                 <li><a href="#">Reports</a>

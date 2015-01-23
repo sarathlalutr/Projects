@@ -180,6 +180,10 @@
     <Content Include="css\zebra_dialog\flat\warning.png" />
     <Content Include="css\zebra_dialog\flat\zebra_dialog.css" />
     <Content Include="EditBranch.aspx" />
+    <Content Include="EditDepartment.aspx" />
+    <Content Include="EditDescription.aspx" />
+    <Content Include="EditDesignation.aspx" />
+    <Content Include="EditLocation.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\border.png" />
     <Content Include="Images\bullet.png" />
@@ -243,6 +247,14 @@
     <Content Include="Scripts\NBAD\noty\promise.js" />
     <Content Include="Scripts\NBAD\noty\themes\default.js" />
     <Content Include="Scripts\NBAD\Validations\BranchEntry.js" />
+    <Content Include="Scripts\NBAD\Validations\EditDescriptionEntry.js" />
+    <Content Include="Scripts\NBAD\Validations\DescriptionEntry.js" />
+    <Content Include="Scripts\NBAD\Validations\EditLocationEntry.js" />
+    <Content Include="Scripts\NBAD\Validations\LocationEntry.js" />
+    <Content Include="Scripts\NBAD\Validations\EditDesignationEntry.js" />
+    <Content Include="Scripts\NBAD\Validations\DesignationEntry.js" />
+    <Content Include="Scripts\NBAD\Validations\EditDepartmentEntry.js" />
+    <Content Include="Scripts\NBAD\Validations\DepartmentEntry.js" />
     <Content Include="Scripts\NBAD\Validations\EditBranchEntry.js" />
     <Content Include="Scripts\NBAD\zebra_dialog.js" />
     <Content Include="UploadData.aspx" />
@@ -255,6 +267,7 @@
     <Content Include="departmentEntry.aspx" />
     <Content Include="designationEntry.aspx" />
     <Content Include="locationEntry.aspx" />
+    <Content Include="descriptionEntry.aspx" />
     <None Include="Properties\PublishProfiles\NBAD.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -335,6 +348,34 @@
     </Compile>
     <Compile Include="EditBranch.aspx.designer.cs">
       <DependentUpon>EditBranch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditDepartment.aspx.cs">
+      <DependentUpon>EditDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditDepartment.aspx.designer.cs">
+      <DependentUpon>EditDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditDescription.aspx.cs">
+      <DependentUpon>EditDescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditDescription.aspx.designer.cs">
+      <DependentUpon>EditDescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditDesignation.aspx.cs">
+      <DependentUpon>EditDesignation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditDesignation.aspx.designer.cs">
+      <DependentUpon>EditDesignation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditLocation.aspx.cs">
+      <DependentUpon>EditLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditLocation.aspx.designer.cs">
+      <DependentUpon>EditLocation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -437,6 +478,13 @@
     </Compile>
     <Compile Include="locationEntry.aspx.designer.cs">
       <DependentUpon>locationEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="descriptionEntry.aspx.cs">
+      <DependentUpon>descriptionEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="descriptionEntry.aspx.designer.cs">
+      <DependentUpon>descriptionEntry.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

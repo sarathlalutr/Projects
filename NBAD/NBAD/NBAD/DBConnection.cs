@@ -315,5 +315,167 @@ namespace NBAD
             }
             return allData;
         }
+
+        internal int InsertDepartment(string departmentName)
+        {
+            if (con.State.Equals(ConnectionState.Closed))
+            {
+                con.Open();
+            }
+            var cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "usp_tblDepartmentInsert";
+
+            cmd.Parameters.Add("@DepartmentName", departmentName);
+            cmd.Connection = con;
+            int rs = cmd.ExecuteNonQuery();
+
+            con.Close();
+            return rs;
+        }
+
+        internal void updateDepartment(string departmentName, string departmentID)
+        {
+            string status = "";
+            if (con.State.Equals(ConnectionState.Closed))
+            {
+                con.Open();
+            }
+            var cmd = new SqlCommand("usp_tblDepartmentUpdate", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@DepartmentId", SqlDbType.Int).Value = departmentID;
+
+            cmd.Parameters.Add("@DepartmentName", departmentName);
+
+            //con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        internal int InsertDesignation(string designation)
+        {
+            if (con.State.Equals(ConnectionState.Closed))
+            {
+                con.Open();
+            }
+            var cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "usp_tblDesignationInsert";
+
+            cmd.Parameters.Add("@DesignationName", designation);
+            cmd.Connection = con;
+            int rs = cmd.ExecuteNonQuery();
+
+            con.Close();
+            return rs;
+        }
+
+        internal void updateDesignation(string designation, string designationID)
+        {
+            string status = "";
+            if (con.State.Equals(ConnectionState.Closed))
+            {
+                con.Open();
+            }
+            var cmd = new SqlCommand("usp_tblDesignationUpdate", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@DesignationId", SqlDbType.Int).Value = designationID;
+
+            cmd.Parameters.Add("@DesignationName", designation);
+
+            //con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        internal int InsertLocation(string location)
+        {
+            int rs=0;
+            try
+            {
+                if (con.State.Equals(ConnectionState.Closed))
+                {
+                    con.Open();
+                }
+                var cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_tblLocationInsert";
+
+                cmd.Parameters.Add("@LocationName", location);
+                cmd.Connection = con;
+                 rs = cmd.ExecuteNonQuery();
+
+                con.Close();
+               
+            }
+            catch (Exception)
+            {
+                
+            }
+            return rs;
+        }
+
+        internal void updateLocation(string location, string LocationID)
+        {
+            string status = "";
+            if (con.State.Equals(ConnectionState.Closed))
+            {
+                con.Open();
+            }
+            var cmd = new SqlCommand("usp_tblLocationUpdate", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@LocationId", SqlDbType.Int).Value = LocationID;
+
+            cmd.Parameters.Add("@LocationName", location);
+
+            //con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        internal int InsertDescription(string description)
+        {
+            int rs = 0;
+            try
+            {
+                if (con.State.Equals(ConnectionState.Closed))
+                {
+                    con.Open();
+                }
+                var cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_tblDescriptionInsert";
+
+                cmd.Parameters.Add("@Description", description);
+                cmd.Connection = con;
+                rs = cmd.ExecuteNonQuery();
+
+                con.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            return rs;
+        }
+
+        internal void updateDescription(string description, string descriptionID)
+        {
+            string status = "";
+            if (con.State.Equals(ConnectionState.Closed))
+            {
+                con.Open();
+            }
+            var cmd = new SqlCommand("tblDescriptionUpdate", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@DescriptionId", SqlDbType.Int).Value = descriptionID;
+
+            cmd.Parameters.Add("@Description", description);
+
+            //con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }
