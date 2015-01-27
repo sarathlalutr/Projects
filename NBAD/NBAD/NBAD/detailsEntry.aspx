@@ -1,5 +1,33 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NBADMasterPage.Master" AutoEventWireup="true" CodeBehind="detailsEntry.aspx.cs" Inherits="NBAD.WebForm6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="Scripts/NBAD/Validations/detailsEntry.js"></script>
+    <script>
+        $(document).ready(function () {
+ 
+            $('#ContentPlaceHolder1_txtSwipeInTime').datetimepicker({
+                //mask: false,
+                //timepicker: false,
+                //value: today,
+                format: 'd/m/Y H:i',
+                closeOnDateSelect: true
+
+                //,
+                //formatDate: 'Y/m/d',
+            });
+            $('#ContentPlaceHolder1_txtSwipeOutTime').datetimepicker({
+                //mask: false,
+                //timepicker: false,
+                //value: today,
+                format: 'd/m/Y H:i',
+                closeOnDateSelect: true
+
+                //,
+                //formatDate: 'Y/m/d',
+            });
+        });
+       
+    </script>
+    
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -18,6 +46,6 @@
     <label>Swipe In time</label><asp:TextBox ID="txtSwipeInTime" runat="server"></asp:TextBox>
     <label>Swipe In Location</label><asp:DropDownList ID="drpSwipeInLocation" runat="server"></asp:DropDownList>
         <label>Swipe Out time</label><asp:TextBox ID="txtSwipeOutTime" runat="server"></asp:TextBox>
-    <label>Swipe Out Location</label><asp:DropDownList ID="drpSwipeOutLocation" runat="server"></asp:DropDownList>
-    <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+    <label>Swipe Out Location</label><asp:DropDownList ID="drpSwipeOutLocation" runat="server" ></asp:DropDownList>
+    <asp:Button ID="btnSubmit" runat="server" Text="Submit" Height="26px" OnClick="btnSubmit_Click" OnClientClick="return detailsEntry();"/>
 </asp:Content>

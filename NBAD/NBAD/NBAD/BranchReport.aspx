@@ -50,9 +50,10 @@
                                                 <th>Description</th>
                                                 <th>Branch</th>
                                                 <th>Department</th>
-                                                <th>Location</th>
-                                                <th>AccessTime</th>
-                                               
+                                                <th>SwipeInLocation</th>
+                                                <th>SwipeInTime</th>
+                                               <th>SwipeOutTime</th>
+                                                <th>SwipeOutLocation</th>
                                             </thead>
                                             <tbody>
                             </HeaderTemplate>
@@ -81,10 +82,16 @@
                                         <%# DataBinder.Eval(Container.DataItem, "Department") %>
                                     </td>
                                     <td>
-                                        <%# DataBinder.Eval(Container.DataItem, "Location") %>
+                                        <%# DataBinder.Eval(Container.DataItem, "SwipeInLocation") %>
                                     </td>
                                     <td>
-                                        <%# DataBinder.Eval(Container.DataItem, "AccessTime") %>
+                                        <%# DataBinder.Eval(Container.DataItem, "SwipeInTime") %>
+                                    </td>
+                                     <td>
+                                        <%# DataBinder.Eval(Container.DataItem, "SwipeOutTime") %>
+                                    </td>
+                                    <td>
+                                        <%# DataBinder.Eval(Container.DataItem, "SwipeOutLocation") %>
                                     </td>
                                 </tr>
                             </ItemTemplate>

@@ -164,6 +164,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="css\colorbox.css" />
+    <Content Include="css\jquery.datetimepicker.css" />
     <Content Include="css\StyleSheet.css" />
     <Content Include="css\zebra_dialog\default\confirmation.png" />
     <Content Include="css\zebra_dialog\default\error.png" />
@@ -229,6 +230,7 @@
     <Content Include="NBADMasterPage.Master" />
     <Content Include="Scripts\NBAD\BaseJs.js" />
     <Content Include="Scripts\NBAD\jquery.colorbox-min.js" />
+    <Content Include="Scripts\jquery.datetimepicker.js" />
     <Content Include="Scripts\NBAD\noty\jquery.noty.js" />
     <Content Include="Scripts\NBAD\noty\layouts\bottom.js" />
     <Content Include="Scripts\NBAD\noty\layouts\bottomCenter.js" />
@@ -247,6 +249,7 @@
     <Content Include="Scripts\NBAD\noty\promise.js" />
     <Content Include="Scripts\NBAD\noty\themes\default.js" />
     <Content Include="Scripts\NBAD\Validations\BranchEntry.js" />
+    <Content Include="Scripts\NBAD\Validations\detailsEntry.js" />
     <Content Include="Scripts\NBAD\Validations\EditDescriptionEntry.js" />
     <Content Include="Scripts\NBAD\Validations\DescriptionEntry.js" />
     <Content Include="Scripts\NBAD\Validations\EditLocationEntry.js" />

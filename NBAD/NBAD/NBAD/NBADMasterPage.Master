@@ -10,10 +10,13 @@
     <script src="Scripts/jquery-1.7.1.min.js"></script>
     <script src="Scripts/NBAD/zebra_dialog.js"></script>
     <link href="css/zebra_dialog/flat/zebra_dialog.css" rel="stylesheet" />
+    <link href="css/jquery.datetimepicker.css" rel="stylesheet" />
     <script src="Scripts/NBAD/BaseJs.js"></script>
     <script src="Scripts/NBAD/jquery.dataTables.min.js"></script>
     <script src="Scripts/NBAD/jquery.colorbox-min.js"></script>
     <script src="Scripts/NBAD/noty/packaged/jquery.noty.packaged.min.js"></script>
+    <script src="Scripts/jquery.datetimepicker.js"></script>
+
     <script>
         function showDashPop() {
             $("#divDashPop").fadeIn();

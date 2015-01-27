@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Web;
+using DotNetOpenAuth.OpenId.Extensions.SimpleRegistration;
 
 namespace NBAD
 {
@@ -476,6 +478,51 @@ namespace NBAD
             //con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
+        }
+
+        internal int insertDetails(string empid, string empname, string gender, string desigantion,
+            string description, string branch, string department, string swipeIntime, string swipeInLocation, string swipeOutTime, 
+            string swipeOutLocation)
+        {
+            if (con.State.Equals(ConnectionState.Closed))
+            {
+                con.Open();
+            }
+            var cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "usp_tblAccessInsertNew";
+            cmd.Parameters.Add("@EmployeeId", empid);
+            cmd.Parameters.Add("@EmployeeName", empname);
+            cmd.Parameters.Add("@Gender", gender);
+            cmd.Parameters.Add("@Designation", desigantion);
+            cmd.Parameters.Add("@Description", description);
+            cmd.Parameters.Add("@Branch", branch);
+            cmd.Parameters.Add("@Department", department);
+            cmd.Parameters.Add("@SwipeInLocation", swipeInLocation);
+            cmd.Parameters.Add("@SwipeInTime", swipeIntime);
+            cmd.Parameters.Add("@SwipeOutTime", swipeOutTime);
+            cmd.Parameters.Add("@SwipeOutLocation", swipeOutLocation);
+            cmd.Connection = con;
+            int rs = cmd.ExecuteNonQuery();
+
+            con.Close();
+            return rs;
+        }
+
+        internal DateTime covertDateTime(string dateIn)
+        {
+            string NewFormat = "";
+            var date = new DateTime();
+            try
+            {
+                //string[] date1 = dateIn.Split('/');
+                //NewFormat = date1[1] + "/" + date1[0] + "/" + date1[2];
+                date = DateTime.ParseExact(dateIn.Trim(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+            }
+            catch (Exception ex)
+            {
+            }
+            return date;
         }
     }
 }

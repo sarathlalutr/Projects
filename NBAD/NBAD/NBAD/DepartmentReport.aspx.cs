@@ -30,8 +30,8 @@ namespace NBAD
                 drpDepartment.Items.Clear();
                 drpDepartment.Items.Add("-select-");
                 drpDepartment.AppendDataBoundItems = true;
-                drpDepartment.DataTextField = "Department";
-                //drpBuilding.DataValueField = "BuildingDetailsId";
+                drpDepartment.DataTextField = "DepartmentName";
+                drpDepartment.DataValueField = "DepartmentId";
                 drpDepartment.DataSource = DEPARTMENTTable;
                 drpDepartment.DataBind();
                 //drpdEmpCategory.Enabled = true;
@@ -43,7 +43,8 @@ namespace NBAD
             try
             {
                 var repObj = new ReportClass();
-                DataTable dt = repObj.DepartmentReport(drpDepartment.SelectedItem.Text.Trim());
+                //DataTable dt = repObj.DepartmentReport(drpDepartment.SelectedItem.Text.Trim());
+                DataTable dt = repObj.DepartmentReport(drpDepartment.SelectedValue);
 
                 //grvExcelData.DataSource = dt;
 
@@ -76,8 +77,8 @@ namespace NBAD
             try
             {
                 var repObj = new ReportClass();
-                DataTable dt = repObj.DepartmentReport(drpDepartment.SelectedItem.Text.Trim());
-
+                //DataTable dt = repObj.DepartmentReport(drpDepartment.SelectedItem.Text.Trim());
+                DataTable dt = repObj.DepartmentReport(drpDepartment.SelectedValue);
                 grvExcelData.DataSource = dt;
 
                 // bind the gridview

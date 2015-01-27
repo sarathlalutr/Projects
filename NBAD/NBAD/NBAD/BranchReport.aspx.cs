@@ -31,8 +31,8 @@ namespace NBAD
                 drpBranch.Items.Clear();
                 drpBranch.Items.Add("-select-");
                 drpBranch.AppendDataBoundItems = true;
-                drpBranch.DataTextField = "Branch";
-                //drpBuilding.DataValueField = "BuildingDetailsId";
+                drpBranch.DataTextField = "BranchName";
+                drpBranch.DataValueField = "BranchEntryId";
                 drpBranch.DataSource = branchTable;
                 drpBranch.DataBind();
                 //drpdEmpCategory.Enabled = true;
@@ -44,7 +44,8 @@ namespace NBAD
             try
             {
                 var repObj = new ReportClass();
-                DataTable dt = repObj.BranchReport(drpBranch.SelectedItem.Text.Trim());
+                //DataTable dt = repObj.BranchReport(drpBranch.SelectedItem.Text.Trim());
+                DataTable dt = repObj.BranchReport(drpBranch.SelectedValue);
 
                 if (dt == null)
                 {
@@ -72,7 +73,8 @@ namespace NBAD
             try
             {
                 var repObj = new ReportClass();
-                DataTable dt = repObj.BranchReport(drpBranch.SelectedItem.Text.Trim());
+                //DataTable dt = repObj.BranchReport(drpBranch.SelectedItem.Text.Trim());
+                DataTable dt = repObj.BranchReport(drpBranch.SelectedValue);
 
                 grvExcelData.DataSource = dt;
 
