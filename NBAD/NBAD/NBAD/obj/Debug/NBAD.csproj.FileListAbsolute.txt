@@ -15,7 +15,9 @@ E:\MyProjects\NBAD\NBAD\NBAD\bin\Microsoft.AspNet.Membership.OpenAuth.dll
 E:\MyProjects\NBAD\NBAD\NBAD\bin\Microsoft.Web.Infrastructure.dll
 E:\MyProjects\NBAD\NBAD\NBAD\bin\System.Web.Providers.dll
 E:\MyProjects\NBAD\NBAD\NBAD\bin\UserDetails.dll
+E:\MyProjects\NBAD\NBAD\NBAD\bin\itextsharp.dll
 E:\MyProjects\NBAD\NBAD\NBAD\bin\EPPlus.dll
+E:\MyProjects\NBAD\NBAD\NBAD\bin\DocX.dll
 E:\MyProjects\NBAD\NBAD\NBAD\bin\Encryption.pdb
 E:\MyProjects\NBAD\NBAD\NBAD\bin\Libraries.pdb
 E:\MyProjects\NBAD\NBAD\NBAD\bin\UserDetails.pdb

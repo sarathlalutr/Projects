@@ -25,7 +25,8 @@ namespace NBAD
             try
             {
                 var conobj = new DBConnection();
-                int rs = conobj.InsertBranch(txtBranchID.Text.Trim(), txtBranchName.Text.Trim());
+                int rs = conobj.InsertBranch(txtBranchID.Text.Trim(), txtBranchName.Text.Trim(), txtScheduleInTime.Text.Trim(), txtScheduleOutTime.Text.Trim(), Session["username"].ToString(),System.DateTime.Now);
+                conobj.insertLog("Insert", "Branch Entry", Session["username"].ToString(), System.DateTime.Now);
                 fillBranch();
                 clearfields();
                 if (rs > 0)
@@ -76,6 +77,7 @@ namespace NBAD
                 if (res == "547")
                     ScriptManager.RegisterStartupScript(this, GetType(), "showalert",
                         "showAlert('Unable to delete..It is already used!!', 'error', 'top');", true);
+                conobj.insertLog("Delete", "Branch Entry", Session["username"].ToString(), System.DateTime.Now);
                 fillBranch();
             }
         }

@@ -30,3 +30,5 @@ E:\MyProjects\NBAD\NBAD\NBAD\bin\EPPlus.xml
 E:\MyProjects\NBAD\NBAD\NBAD\obj\Release\NBAD.csprojResolveAssemblyReference.cache
 E:\MyProjects\NBAD\NBAD\NBAD\obj\Release\NBAD.dll
 E:\MyProjects\NBAD\NBAD\NBAD\obj\Release\NBAD.pdb
+E:\MyProjects\NBAD\NBAD\NBAD\bin\itextsharp.dll
+E:\MyProjects\NBAD\NBAD\NBAD\bin\DocX.dll

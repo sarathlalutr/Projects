@@ -181,19 +181,32 @@
     <Content Include="css\zebra_dialog\flat\warning.png" />
     <Content Include="css\zebra_dialog\flat\zebra_dialog.css" />
     <Content Include="EditBranch.aspx" />
+    <Content Include="EditBranchTiming.aspx" />
     <Content Include="EditDepartment.aspx" />
     <Content Include="EditDescription.aspx" />
     <Content Include="EditDesignation.aspx" />
+    <Content Include="EditDetails.aspx" />
     <Content Include="EditLocation.aspx" />
+    <Content Include="fonts\opensans-light.css" />
+    <Content Include="fonts\opensans-light.svg" />
+    <Content Include="fonts\opensans-regular.css" />
+    <Content Include="fonts\opensans-regular.svg" />
+    <Content Include="fonts\opensans-semibold.css" />
+    <Content Include="fonts\opensans-semibold.svg" />
     <Content Include="Images\accent.png" />
+    <Content Include="Images\banner.jpg" />
+    <Content Include="Images\bg.jpg" />
+    <Content Include="Images\bg_blanket.png" />
     <Content Include="Images\border.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\controls.png" />
+    <Content Include="Images\excel-xls-icon.png" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\images\search.png" />
     <Content Include="Images\images\sprite_icons.png" />
     <Content Include="Images\loading.gif" />
     <Content Include="Images\loading_background.png" />
+    <Content Include="Images\login -logo.png" />
     <Content Include="Images\login-copy_01.png" />
     <Content Include="Images\login-copy_02.png" />
     <Content Include="Images\login-copy_03.png" />
@@ -222,9 +235,15 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Images\overlay.png" />
+    <Content Include="Images\pdf-icon.png" />
     <Content Include="Images\search.png" />
+    <Content Include="Images\small-logo.jpg" />
+    <Content Include="Images\small-logo.png" />
     <Content Include="Images\spacer.gif" />
     <Content Include="Images\sprite_icons.png" />
+    <Content Include="Images\tick.jpg" />
+    <Content Include="Images\user.jpg" />
+    <Content Include="Images\word-doc-icon.png" />
     <Content Include="Logon.aspx" />
     <Content Include="packages.config" />
     <Content Include="NBADMasterPage.Master" />
@@ -248,7 +267,12 @@
     <Content Include="Scripts\NBAD\noty\packaged\jquery.noty.packaged.min.js" />
     <Content Include="Scripts\NBAD\noty\promise.js" />
     <Content Include="Scripts\NBAD\noty\themes\default.js" />
+    <Content Include="Scripts\NBAD\Validations\allswipeReport.js" />
     <Content Include="Scripts\NBAD\Validations\BranchEntry.js" />
+    <Content Include="Scripts\NBAD\Validations\BranchTimingEntry.js" />
+    <Content Include="Scripts\NBAD\Validations\PunctualityReport.js" />
+    <Content Include="Scripts\NBAD\Validations\LogReport.js" />
+    <Content Include="Scripts\NBAD\Validations\EditdetailsEntry.js" />
     <Content Include="Scripts\NBAD\Validations\detailsEntry.js" />
     <Content Include="Scripts\NBAD\Validations\EditDescriptionEntry.js" />
     <Content Include="Scripts\NBAD\Validations\DescriptionEntry.js" />
@@ -271,6 +295,22 @@
     <Content Include="designationEntry.aspx" />
     <Content Include="locationEntry.aspx" />
     <Content Include="descriptionEntry.aspx" />
+    <Content Include="allSwipeReport1.aspx" />
+    <Content Include="allSwipeReport.aspx" />
+    <Content Include="ManualTimeEntryReport.aspx" />
+    <Content Include="PunctualityReport.aspx" />
+    <Content Include="branchTiming.aspx" />
+    <Content Include="LogReport.aspx" />
+    <Content Include="WorkedDayReport.aspx" />
+    <Content Include="fonts\opensans-light.eot" />
+    <Content Include="fonts\opensans-light.ttf" />
+    <Content Include="fonts\opensans-light.woff" />
+    <Content Include="fonts\opensans-regular.eot" />
+    <Content Include="fonts\opensans-regular.ttf" />
+    <Content Include="fonts\opensans-regular.woff" />
+    <Content Include="fonts\opensans-semibold.eot" />
+    <Content Include="fonts\opensans-semibold.ttf" />
+    <Content Include="fonts\opensans-semibold.woff" />
     <None Include="Properties\PublishProfiles\NBAD.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -352,6 +392,13 @@
     <Compile Include="EditBranch.aspx.designer.cs">
       <DependentUpon>EditBranch.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditBranchTiming.aspx.cs">
+      <DependentUpon>EditBranchTiming.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditBranchTiming.aspx.designer.cs">
+      <DependentUpon>EditBranchTiming.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditDepartment.aspx.cs">
       <DependentUpon>EditDepartment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -372,6 +419,13 @@
     </Compile>
     <Compile Include="EditDesignation.aspx.designer.cs">
       <DependentUpon>EditDesignation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditDetails.aspx.cs">
+      <DependentUpon>EditDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditDetails.aspx.designer.cs">
+      <DependentUpon>EditDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditLocation.aspx.cs">
       <DependentUpon>EditLocation.aspx</DependentUpon>
@@ -488,6 +542,55 @@
     </Compile>
     <Compile Include="descriptionEntry.aspx.designer.cs">
       <DependentUpon>descriptionEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="allSwipeReport1.aspx.cs">
+      <DependentUpon>allSwipeReport1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="allSwipeReport1.aspx.designer.cs">
+      <DependentUpon>allSwipeReport1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="allSwipeReport.aspx.cs">
+      <DependentUpon>allSwipeReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="allSwipeReport.aspx.designer.cs">
+      <DependentUpon>allSwipeReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManualTimeEntryReport.aspx.cs">
+      <DependentUpon>ManualTimeEntryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManualTimeEntryReport.aspx.designer.cs">
+      <DependentUpon>ManualTimeEntryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PunctualityReport.aspx.cs">
+      <DependentUpon>PunctualityReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PunctualityReport.aspx.designer.cs">
+      <DependentUpon>PunctualityReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="branchTiming.aspx.cs">
+      <DependentUpon>branchTiming.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="branchTiming.aspx.designer.cs">
+      <DependentUpon>branchTiming.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogReport.aspx.cs">
+      <DependentUpon>LogReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogReport.aspx.designer.cs">
+      <DependentUpon>LogReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkedDayReport.aspx.cs">
+      <DependentUpon>WorkedDayReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkedDayReport.aspx.designer.cs">
+      <DependentUpon>WorkedDayReport.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

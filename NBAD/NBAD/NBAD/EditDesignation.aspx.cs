@@ -34,6 +34,7 @@ namespace NBAD
             var conobj = new DBConnection();
             conobj.updateDesignation(txtDesignationName.Text.Trim(),
                 ViewState["DesignationId"].ToString());
+            conobj.insertLog("Update", "Designation", Session["username"].ToString(), System.DateTime.Now);
             //ScriptManager.RegisterStartupScript(this, typeof(Page), "Alert", "<script>alert('" + "Successfully Updated" + "');</script>", false);
 
             Server.Transfer("designationEntry.aspx", true);

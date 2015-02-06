@@ -32,7 +32,8 @@ namespace NBAD
             try
             {
                 var conobj = new DBConnection();
-                int rs = conobj.InsertLocation(txtLocation.Text.Trim());
+                int rs = conobj.InsertLocation(txtLocation.Text.Trim(), Session["username"].ToString(), System.DateTime.Now);
+                conobj.insertLog("Insert", "Location Entry", Session["username"].ToString(), System.DateTime.Now);
                 fillLocation();
                 clearfields();
                 if (rs > 0)
@@ -88,6 +89,7 @@ namespace NBAD
                 if (res == "547")
                     ScriptManager.RegisterStartupScript(this, GetType(), "showalert",
                         "showAlert('Unable to delete..It is already used!!', 'error', 'top');", true);
+                conobj.insertLog("Delete", "Location Entry", Session["username"].ToString(), System.DateTime.Now);
                 fillLocation();
             }
         }

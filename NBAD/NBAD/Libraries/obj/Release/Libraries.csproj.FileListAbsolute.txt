@@ -13,3 +13,5 @@ E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\System.Net.Http.Formatting.xml
 E:\MyProjects\NBAD\NBAD\Libraries\obj\Release\Libraries.csprojResolveAssemblyReference.cache
 E:\MyProjects\NBAD\NBAD\Libraries\obj\Release\Libraries.dll
 E:\MyProjects\NBAD\NBAD\Libraries\obj\Release\Libraries.pdb
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\DocX.dll
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Release\itextsharp.dll

@@ -37,6 +37,7 @@ namespace NBAD
                 var conobj = new DBConnection();
                 conobj.updateDescription(txtDescription.Text.Trim(),
                     ViewState["DescriptionId"].ToString());
+                conobj.insertLog("Update", "Description", Session["username"].ToString(), System.DateTime.Now);
                 //ScriptManager.RegisterStartupScript(this, typeof(Page), "Alert", "<script>alert('" + "Successfully Updated" + "');</script>", false);
 
                 Server.Transfer("descriptionEntry.aspx", true);

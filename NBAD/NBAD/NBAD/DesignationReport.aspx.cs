@@ -31,8 +31,8 @@ namespace NBAD
                 drpDesignation.Items.Clear();
                 drpDesignation.Items.Add("-select-");
                 drpDesignation.AppendDataBoundItems = true;
-                drpDesignation.DataTextField = "Designation";
-                //drpBuilding.DataValueField = "BuildingDetailsId";
+                drpDesignation.DataTextField = "DesignationName";
+                drpDesignation.DataValueField = "DesignationId";
                 drpDesignation.DataSource = designationTable;
                 drpDesignation.DataBind();
                 //drpdEmpCategory.Enabled = true;
@@ -44,7 +44,8 @@ namespace NBAD
             try
             {
                 var repObj = new ReportClass();
-                DataTable dt = repObj.DesigantionReport(drpDesignation.SelectedItem.Text.Trim());
+                //DataTable dt = repObj.DesigantionReport(drpDesignation.SelectedItem.Text.Trim());
+                DataTable dt = repObj.DesigantionReport(drpDesignation.SelectedValue);
 
                 if (dt == null)
                 {
@@ -72,7 +73,8 @@ namespace NBAD
             try
             {
                 var repObj = new ReportClass();
-                DataTable dt = repObj.DesigantionReport(drpDesignation.SelectedItem.Text.Trim());
+                //DataTable dt = repObj.DesigantionReport(drpDesignation.SelectedItem.Text.Trim());
+                DataTable dt = repObj.DesigantionReport(drpDesignation.SelectedValue);
 
                 grvExcelData.DataSource = dt;
 

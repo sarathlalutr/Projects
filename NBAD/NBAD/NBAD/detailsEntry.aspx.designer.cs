@@ -58,6 +58,15 @@ namespace NBAD {
         protected global::System.Web.UI.WebControls.DropDownList drpDescription;
         
         /// <summary>
+        /// txtApprovedDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtApprovedDate;
+        
+        /// <summary>
         /// drpBranch control.
         /// </summary>
         /// <remarks>
@@ -94,6 +103,15 @@ namespace NBAD {
         protected global::System.Web.UI.WebControls.DropDownList drpSwipeInLocation;
         
         /// <summary>
+        /// drpReaderType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpReaderType;
+        
+        /// <summary>
         /// txtSwipeOutTime control.
         /// </summary>
         /// <remarks>
@@ -112,6 +130,15 @@ namespace NBAD {
         protected global::System.Web.UI.WebControls.DropDownList drpSwipeOutLocation;
         
         /// <summary>
+        /// txtAprovedBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAprovedBy;
+        
+        /// <summary>
         /// btnSubmit control.
         /// </summary>
         /// <remarks>
@@ -119,5 +146,32 @@ namespace NBAD {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
+        
+        /// <summary>
+        /// txtSearchBranch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSearchBranch;
+        
+        /// <summary>
+        /// btnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSearch;
+        
+        /// <summary>
+        /// gridDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridDetails;
     }
 }

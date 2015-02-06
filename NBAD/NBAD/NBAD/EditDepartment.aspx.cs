@@ -34,6 +34,7 @@ namespace NBAD
             var conobj = new DBConnection();
             conobj.updateDepartment(txtDepartmentName.Text.Trim(),
                 ViewState["DepartmentId"].ToString());
+            conobj.insertLog("Update", "Department", Session["username"].ToString(), System.DateTime.Now);
             //ScriptManager.RegisterStartupScript(this, typeof(Page), "Alert", "<script>alert('" + "Successfully Updated" + "');</script>", false);
 
             Server.Transfer("departmentEntry.aspx", true);

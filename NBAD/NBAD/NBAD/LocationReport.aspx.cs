@@ -31,8 +31,8 @@ namespace NBAD
                 drpLocation.Items.Clear();
                 drpLocation.Items.Add("-select-");
                 drpLocation.AppendDataBoundItems = true;
-                drpLocation.DataTextField = "Location";
-                //drpBuilding.DataValueField = "BuildingDetailsId";
+                drpLocation.DataTextField = "LocationName";
+                drpLocation.DataValueField = "LocationId";
                 drpLocation.DataSource = locationTable;
                 drpLocation.DataBind();
                 //drpdEmpCategory.Enabled = true;
@@ -44,7 +44,8 @@ namespace NBAD
             try
             {
                 var repObj = new ReportClass();
-                DataTable dt = repObj.LocationReport(drpLocation.SelectedItem.Text.Trim());
+                //DataTable dt = repObj.LocationReport(drpLocation.SelectedItem.Text.Trim());
+                DataTable dt = repObj.LocationReport(drpLocation.SelectedValue);
 
                 if (dt == null)
                 {
@@ -70,8 +71,8 @@ namespace NBAD
         protected void drpLocation_SelectedIndexChanged(object sender, EventArgs e)
         {
             var repObj = new ReportClass();
-            DataTable dt = repObj.LocationReport(drpLocation.SelectedItem.Text.Trim());
-
+            //DataTable dt = repObj.LocationReport(drpLocation.SelectedItem.Text.Trim());
+            DataTable dt = repObj.LocationReport(drpLocation.SelectedValue);
             grvExcelData.DataSource = dt;
 
             // bind the gridview

@@ -17,7 +17,17 @@ namespace NBAD
                 fillDropdownList();
                 txtSwipeInTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 txtSwipeOutTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                txtApprovedDate.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                fillDetails();
             }
+        }
+
+        private void fillDetails()
+        {
+            var conObj = new DBConnection();
+            DataTable dt = conObj.GetAllDetails("EmployeeSelectManualEntryAll");
+            gridDetails.DataSource = dt;
+            gridDetails.DataBind();
         }
 
         private void fillDropdownList()
@@ -86,7 +96,7 @@ namespace NBAD
                 drpBranch.Items.Add("-select-");
                 drpBranch.AppendDataBoundItems = true;
                 drpBranch.DataTextField = "BranchName";
-                drpBranch.DataValueField = "BranchEntryId";
+                drpBranch.DataValueField = "BranchID";
                 drpBranch.DataSource = dt;
                 drpBranch.DataBind();
 
@@ -137,15 +147,24 @@ namespace NBAD
                 var conObj = new DBConnection();
                 DateTime swipeInTime_Val = conObj.covertDateTime(txtSwipeInTime.Text.Trim());
                 string swipeInTime = swipeInTime_Val.ToString();
-                DateTime swipeOutTime_Val = conObj.covertDateTime((txtSwipeOutTime.Text.Trim()));
-                string swipeOutTime = swipeOutTime_Val.ToString();
+                //DateTime swipeOutTime_Val = conObj.covertDateTime((txtSwipeOutTime.Text.Trim()));
+                //string swipeOutTime = swipeOutTime_Val.ToString();
+                DateTime aprovedtime_Val = conObj.covertDateTime((txtApprovedDate.Text.Trim()));
+                string aprovedTime = aprovedtime_Val.ToString();
+                //int rs = conObj.insertDetails(txtEmployeeId.Text.Trim(), txtEmployeeName.Text.Trim(),
+                //    drpGender.SelectedValue, drpDesignation.SelectedValue,
+                //    drpDescription.SelectedValue, drpBranch.SelectedValue, drpDepartment.SelectedValue,
+                //    swipeInTime, drpSwipeInLocation.SelectedValue,
+                //    swipeOutTime, drpSwipeOutLocation.SelectedValue);
+
 
                 int rs = conObj.insertDetails(txtEmployeeId.Text.Trim(), txtEmployeeName.Text.Trim(),
-                    drpGender.SelectedValue, drpDesignation.SelectedValue,
-                    drpDescription.SelectedValue, drpBranch.SelectedValue, drpDepartment.SelectedValue,
-                    swipeInTime, drpSwipeInLocation.SelectedValue,
-                    swipeOutTime, drpSwipeOutLocation.SelectedValue);
+                    drpGender.SelectedValue, drpDesignation.SelectedItem.Text,
+                    drpDescription.SelectedItem.Text, drpBranch.SelectedValue, drpDepartment.SelectedItem.Text,
+                    swipeInTime, drpSwipeInLocation.SelectedItem.Text, drpReaderType.SelectedItem.Text, txtAprovedBy.Text.Trim(), aprovedTime, Session["username"].ToString(), System.DateTime.Now);
+                conObj.insertLog("Insert", "Details Entry", Session["username"].ToString(), System.DateTime.Now);
                 clearFields();
+                fillDetails();
                 if (rs > 0)
                     ScriptManager.RegisterStartupScript(this, GetType(), "showalert",
                         "showAlert('Record saved successfully!', 'success', 'top');", true);
@@ -173,6 +192,60 @@ namespace NBAD
             drpBranch.SelectedValue = "-select-";
             drpSwipeInLocation.SelectedValue = "-select-";
             drpSwipeOutLocation.SelectedValue = "-select-";
+            drpDepartment.SelectedValue = "-select-";
+            txtAprovedBy.Text = "";
+            drpReaderType.SelectedValue = "IN";
+
+            txtSwipeInTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+            txtSwipeOutTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+            txtApprovedDate.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+
+        }
+        protected void gridDetails_PageIndexChanging(object sender, System.Web.UI.WebControls.GridViewPageEventArgs e)
+        {
+            gridDetails.PageIndex = e.NewPageIndex;
+            if (txtSearchBranch.Text == "")
+            {
+                fillBranch();
+            }
+            else
+                Search();
+
+        }
+
+        protected void gridDetails_RowCommand(object sender, System.Web.UI.WebControls.GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "delete")
+            {
+                //http://www.c-sharpcorner.com/uploadfile/kannagoud/edit-update-delete-record-in-repeater-control/
+                var conobj = new DBConnection();
+                string res = conobj.deletewithId(e.CommandArgument.ToString(), "usp_tblAccess_ManualEntryDelete", "@NBADId");
+                if (res == "547")
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert",
+                        "showAlert('Unable to delete..It is already used!!', 'error', 'top');", true);
+                conobj.insertLog("Delete", "Details Entry", Session["username"].ToString(), System.DateTime.Now);
+                fillDetails();
+            }
+        }
+
+        protected void gridDetails_RowDeleting(object sender, System.Web.UI.WebControls.GridViewDeleteEventArgs e)
+        {
+
+        }
+
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            Search();
+
+        }
+
+        private void Search()
+        {
+            var conobj = new DBConnection();
+
+            gridDetails.DataSource = conobj.GetSearchDetails("usp_tblAccess_ManualEntrySearch", "@SearchTerm ", txtSearchBranch.Text.Trim());
+            gridDetails.DataBind();
         }
     }
 }

@@ -35,6 +35,7 @@ namespace NBAD
             var conobj = new DBConnection();
             conobj.updateLocation(txtLocation.Text.Trim(),
                 ViewState["DesignationId"].ToString());
+            conobj.insertLog("Update", "Location", Session["username"].ToString(), System.DateTime.Now);
             //ScriptManager.RegisterStartupScript(this, typeof(Page), "Alert", "<script>alert('" + "Successfully Updated" + "');</script>", false);
 
             Server.Transfer("locationEntry.aspx", true);

@@ -32,7 +32,8 @@ namespace NBAD
             try
             {
                 var conobj = new DBConnection();
-                int rs = conobj.InsertDescription(txtDescription.Text.Trim());
+                int rs = conobj.InsertDescription(txtDescription.Text.Trim(), Session["username"].ToString(),System.DateTime.Now);
+                conobj.insertLog("Insert", "Description Entry", Session["username"].ToString(), System.DateTime.Now);
                 fillDescription();
                 clearfields();
                 if (rs > 0)
@@ -87,6 +88,7 @@ namespace NBAD
                 if (res == "547")
                     ScriptManager.RegisterStartupScript(this, GetType(), "showalert",
                         "showAlert('Unable to delete..It is already used!!', 'error', 'top');", true);
+                conobj.insertLog("Delete", "Description Entry", Session["username"].ToString(), System.DateTime.Now);
                 fillDescription();
             }
         }

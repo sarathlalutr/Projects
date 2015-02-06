@@ -28,14 +28,19 @@ namespace NBAD
         {
             txtBranchID.Text = allData.Rows[0]["BranchID"].ToString();
             txtBranchName.Text = allData.Rows[0]["BranchName"].ToString();
+            txtScheduleInTime.Text = allData.Rows[0]["ScheduleInTime"].ToString();
+            txtScheduleOutTime.Text = allData.Rows[0]["ScheduleOutTime"].ToString();
            
         }
 
         protected void btnEditSubmit_Click(object sender, EventArgs e)
         {
             var conobj = new DBConnection();
-            conobj.updateBranch(txtBranchID.Text.Trim(), txtBranchName.Text.Trim(),
+            //conobj.updateBranch(txtBranchID.Text.Trim(), txtBranchName.Text.Trim(),
+            //    ViewState["BranchEntryId"].ToString());
+            conobj.updateBranch(txtBranchID.Text.Trim(), txtBranchName.Text.Trim(),txtScheduleInTime.Text.Trim(),txtScheduleOutTime.Text.Trim(),
                 ViewState["BranchEntryId"].ToString());
+            conobj.insertLog("Update", "Branch", Session["username"].ToString(), System.DateTime.Now);
             //ScriptManager.RegisterStartupScript(this, typeof(Page), "Alert", "<script>alert('" + "Successfully Updated" + "');</script>", false);
 
             Server.Transfer("branchEntry.aspx", true);

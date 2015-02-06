@@ -1,6 +1,8 @@
 E:\MyProjects\NBAD\NBAD\Libraries\bin\Debug\Libraries.dll
 E:\MyProjects\NBAD\NBAD\Libraries\bin\Debug\Libraries.pdb
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Debug\DocX.dll
 E:\MyProjects\NBAD\NBAD\Libraries\bin\Debug\EPPlus.dll
+E:\MyProjects\NBAD\NBAD\Libraries\bin\Debug\itextsharp.dll
 E:\MyProjects\NBAD\NBAD\Libraries\bin\Debug\System.Net.Http.dll
 E:\MyProjects\NBAD\NBAD\Libraries\bin\Debug\System.Web.Http.dll
 E:\MyProjects\NBAD\NBAD\Libraries\bin\Debug\UserDetails.dll

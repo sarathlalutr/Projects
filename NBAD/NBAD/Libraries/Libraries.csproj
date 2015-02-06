@@ -30,8 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocX">
+      <HintPath>..\..\DocX.dll</HintPath>
+    </Reference>
     <Reference Include="EPPlus">
       <HintPath>..\..\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -50,9 +56,11 @@
   <ItemGroup>
     <Compile Include="DatabaseManager.cs" />
     <Compile Include="ExcelCreater.cs" />
+    <Compile Include="PdfCreater.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportClass.cs" />
     <Compile Include="UserManager.cs" />
+    <Compile Include="WordCreater.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UserDetails\UserDetails.csproj">
